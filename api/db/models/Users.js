@@ -10,8 +10,8 @@ const schema = mongoose.Schema({
 },{
     // timestamps:true
     timestamps :{
-        createAt: create_at,
-        updateAt: update_at
+        createdAt: "created_at",
+        updatedAt: "updated_at"
     }
 });
 

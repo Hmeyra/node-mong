@@ -1,16 +1,14 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const schema = mongoose.Schema({
-    level: String,
-    email: String,
-    location: String,
-    proc_type: String,
-    log: String,
+    name: {type: String, require: true},
+    is_active: {type: Boolean, default: true},
+    created_by: {type: mongoose.SchemaTypes.ObjectId}
 },{
     versionKey:false,
-    timestamps :{
-        createAt: create_at,
-        updateAt: update_at
+    timestamps: {
+        createdAt: "created_at",
+        updatedAt: "updated_at"
     }
 });
 
@@ -19,4 +17,4 @@ class AuditLogs extends mongoose.Model {
 }
 
 schema.loadClass(AuditLogs);
-module.exports = mongoose.model("audit_logs",schema);
+module.exports = mongoose.model("categories",schema);
