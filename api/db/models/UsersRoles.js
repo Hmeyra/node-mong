@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
 const schema = mongoose.Schema({
-    role_id: {type: mongoose.SchemaType.ObjectId, require: true},
-    user_id: {type: mongoose.SchemaType.ObjectId, required: true},
+    role_id: {type: mongoose.SchemaTypes.ObjectId, require: true},
+    user_id: {type: mongoose.SchemaTypes.ObjectId, required: true},
 },{
     versionKey:false,
     timestamps :{

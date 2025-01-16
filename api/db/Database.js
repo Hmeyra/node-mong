@@ -13,7 +13,8 @@ class Database {
         try {
             console.log(options);
             console.log("DB connecting...");
-        let db = await mongoose.connect(process.env.CONNECTION_STRING);
+            //console.log(process.env);
+        let db = await mongoose.connect(options);
         this.mongoConnection = db; 
         console.log("DB connected.");
         } catch (err) {
@@ -22,5 +23,6 @@ class Database {
         }
     }
 }
+
 
 module.exports = Database;
