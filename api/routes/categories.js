@@ -5,7 +5,7 @@ const Response = require('../lib/Response');
 const CustomError = require('../lib/Error');
 const Enum = require('../config/Enum');
 const AuditLogs = require('../lib/AuditLogs');
-const logger = require('../lib/logger/LoggerClass');
+const logger = require('../lib/logger/loggerClass');
 
 router.get('/',async (req, res, next) => {
     try {
@@ -51,7 +51,7 @@ router.post('/update', async (req, res) => {
     try {
         if(!body._id) throw new CustomError(Enum.HTTP_CODES.BAD_REQUEST, "Validation error! ", "_id fields must be filled");
 
-        let updates = {};
+        let updates = {};
         if(body.name) updates.name = body.name;
         if(typeof body.is_active === "boolean") updates.is_active = body.is_active;
 

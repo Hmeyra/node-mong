@@ -1,11 +1,10 @@
 const logger = require('./logger');
 let instance;
 
-class LoggerClass {
+class loggerClass {
     constructor(){
         if(!instance){
-            instance = this.instance;
-            return instance;
+            instance = this;
         } else {
             return instance;
         }
@@ -58,4 +57,4 @@ class LoggerClass {
     }
 }
 
-module.exports = new LoggerClass;   // singleton
+module.exports = new loggerClass();   // singleton
