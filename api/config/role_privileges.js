@@ -92,7 +92,7 @@ module.exports = {
             descripiton: "Category delete"
         },
         {
-            key: "auditlog_view",
+            key: "auditlogs_view",
             name: "Auditlog View",
             group: "AUDITLOGS",
             descripiton: "Auditlog view"
