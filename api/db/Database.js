@@ -11,7 +11,6 @@ class Database {
 
     async connect(options){
         try {
-            console.log(options);
             console.log("DB connecting...");
             //console.log(process.env);
         let db = await mongoose.connect(options);
